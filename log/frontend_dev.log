@@ -394,3 +394,180 @@ Feb 07 12:13:18 symfony [info] {sfWebDebugLogger} Action "job/create" 53.15 ms (
 Feb 07 12:13:18 symfony [info] {sfWebDebugLogger} View "Success" for "job/create" 46.05 ms (1)
 Feb 07 12:13:18 symfony [info] {sfWebDebugLogger} Partial "job/_form" 33.75 ms (1)
 Feb 07 12:13:18 symfony [info] {sfWebResponse} Send content (46445 o)
+Feb 07 12:17:55 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:17:55 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:17:55 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:17:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/create with parameters array (  'module' => 'job',  'action' => 'create',)
+Feb 07 12:17:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:17:55 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:17:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:17:55 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Feb 07 12:17:55 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "job/create".
+Feb 07 12:17:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 07 12:17:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:18:09 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:18:09 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:18:09 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:18:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 12:18:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:18:09 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:18:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:18:09 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Feb 07 12:18:09 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:18:09 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job`
+Feb 07 12:18:09 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Feb 07 12:18:09 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:09 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:18:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:18:09 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (9)
+Feb 07 12:18:09 symfony [info] {sfWebDebugLogger} Action "job/index" 58.34 ms (1)
+Feb 07 12:18:09 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 18.99 ms (1)
+Feb 07 12:18:09 symfony [info] {sfWebResponse} Send content (27550 o)
+Feb 07 12:18:13 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:18:13 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:18:13 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:18:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/new with parameters array (  'module' => 'job',  'action' => 'new',)
+Feb 07 12:18:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:18:13 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:18:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:18:13 symfony [info] {jobActions} Call "jobActions->executeNew()"
+Feb 07 12:18:13 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Feb 07 12:18:13 symfony [info] {sfPartialView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/_form.php"
+Feb 07 12:18:13 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:18:13 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category`
+Feb 07 12:18:14 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:14 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:18:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:18:14 symfony [info] {sfWebDebugLogger} Configuration 1.27 ms (9)
+Feb 07 12:18:14 symfony [info] {sfWebDebugLogger} Action "job/new" 23.88 ms (1)
+Feb 07 12:18:14 symfony [info] {sfWebDebugLogger} View "Success" for "job/new" 165.92 ms (1)
+Feb 07 12:18:14 symfony [info] {sfWebDebugLogger} Partial "job/_form" 155.49 ms (1)
+Feb 07 12:18:14 symfony [info] {sfWebResponse} Send content (43388 o)
+Feb 07 12:18:17 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:18:17 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:18:17 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:18:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/create with parameters array (  'module' => 'job',  'action' => 'create',)
+Feb 07 12:18:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:18:17 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:18:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:18:17 symfony [info] {jobActions} Call "jobActions->executeCreate()"
+Feb 07 12:18:17 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:18:17 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category` WHERE jobeet_category.ID=:p1 LIMIT 1
+Feb 07 12:18:17 symfony [debug] {sfPropelLogger} Binding '4' at position :p1 w/ PDO type PDO::PARAM_INT
+Feb 07 12:18:17 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.TOKEN IS NULL  LIMIT 1
+Feb 07 12:18:17 symfony [info] {jobActions} Change template to "CURRENT/new"
+Feb 07 12:18:17 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/newSuccess.php"
+Feb 07 12:18:17 symfony [info] {sfPartialView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/_form.php"
+Feb 07 12:18:17 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category`
+Feb 07 12:18:17 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:17 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:18:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:18:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:18:17 symfony [info] {sfWebDebugLogger} Configuration 1.24 ms (9)
+Feb 07 12:18:17 symfony [info] {sfWebDebugLogger} Action "job/create" 36.04 ms (1)
+Feb 07 12:18:17 symfony [info] {sfWebDebugLogger} View "Success" for "job/create" 43.72 ms (1)
+Feb 07 12:18:17 symfony [info] {sfWebDebugLogger} Partial "job/_form" 31.95 ms (1)
+Feb 07 12:18:17 symfony [info] {sfWebResponse} Send content (46445 o)
+Feb 07 12:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:20:39 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:20:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 12:20:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:20:39 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:20:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:20:39 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Feb 07 12:20:40 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:20:40 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job`
+Feb 07 12:20:40 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Feb 07 12:20:40 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:20:40 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:20:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:20:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:20:40 symfony [info] {sfWebDebugLogger} Configuration 1.34 ms (9)
+Feb 07 12:20:40 symfony [info] {sfWebDebugLogger} Action "job/index" 76.80 ms (1)
+Feb 07 12:20:40 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 40.95 ms (1)
+Feb 07 12:20:40 symfony [info] {sfWebResponse} Send content (27585 o)
+Feb 07 12:28:11 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:28:11 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:28:11 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:28:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/show/id/2 with parameters array (  'id' => '2',  'module' => 'job',  'action' => 'show',)
+Feb 07 12:28:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:28:11 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:28:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:28:11 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Feb 07 12:28:11 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:28:11 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1
+Feb 07 12:28:11 symfony [debug] {sfPropelLogger} Binding '2' at position :p1 w/ PDO type PDO::PARAM_INT
+Feb 07 12:28:11 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Feb 07 12:28:11 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:11 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:28:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:28:11 symfony [info] {sfWebDebugLogger} Configuration 2.52 ms (9)
+Feb 07 12:28:11 symfony [info] {sfWebDebugLogger} Action "job/show" 78.47 ms (1)
+Feb 07 12:28:11 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 15.13 ms (1)
+Feb 07 12:28:11 symfony [info] {sfWebResponse} Send content (27138 o)
+Feb 07 12:28:14 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:28:14 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:28:14 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:28:14 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 12:28:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:28:14 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:28:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:28:14 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Feb 07 12:28:14 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:28:14 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job`
+Feb 07 12:28:14 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Feb 07 12:28:14 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:14 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:28:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:28:14 symfony [info] {sfWebDebugLogger} Configuration 1.90 ms (9)
+Feb 07 12:28:14 symfony [info] {sfWebDebugLogger} Action "job/index" 27.64 ms (1)
+Feb 07 12:28:14 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 38.04 ms (1)
+Feb 07 12:28:14 symfony [info] {sfWebResponse} Send content (27591 o)
+Feb 07 12:28:18 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:28:18 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:28:18 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:28:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/show/id/1 with parameters array (  'id' => '1',  'module' => 'job',  'action' => 'show',)
+Feb 07 12:28:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:28:18 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:28:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:28:18 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Feb 07 12:28:18 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:28:18 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1
+Feb 07 12:28:18 symfony [debug] {sfPropelLogger} Binding '1' at position :p1 w/ PDO type PDO::PARAM_INT
+Feb 07 12:28:18 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Feb 07 12:28:18 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:18 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:28:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:28:18 symfony [info] {sfWebDebugLogger} Configuration 1.31 ms (9)
+Feb 07 12:28:18 symfony [info] {sfWebDebugLogger} Action "job/show" 16.01 ms (1)
+Feb 07 12:28:18 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 7.97 ms (1)
+Feb 07 12:28:18 symfony [info] {sfWebResponse} Send content (26954 o)
+Feb 07 12:28:22 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Feb 07 12:28:22 symfony [info] {sfPatternRouting} Connect sfRoute "default_index" (/:module)
+Feb 07 12:28:22 symfony [info] {sfPatternRouting} Connect sfRoute "default" (/:module/:action/*)
+Feb 07 12:28:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/edit/id/1 with parameters array (  'id' => '1',  'module' => 'job',  'action' => 'edit',)
+Feb 07 12:28:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:28:22 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 12:28:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:28:22 symfony [info] {jobActions} Call "jobActions->executeEdit()"
+Feb 07 12:28:22 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Feb 07 12:28:22 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1
+Feb 07 12:28:22 symfony [debug] {sfPropelLogger} Binding '1' at position :p1 w/ PDO type PDO::PARAM_INT
+Feb 07 12:28:22 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/editSuccess.php"
+Feb 07 12:28:22 symfony [info] {sfPartialView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/_form.php"
+Feb 07 12:28:22 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category`
+Feb 07 12:28:22 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:22 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 12:28:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:28:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:28:22 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (9)
+Feb 07 12:28:22 symfony [info] {sfWebDebugLogger} Action "job/edit" 33.46 ms (1)
+Feb 07 12:28:22 symfony [info] {sfWebDebugLogger} View "Success" for "job/edit" 54.69 ms (1)
+Feb 07 12:28:22 symfony [info] {sfWebDebugLogger} Partial "job/_form" 43.25 ms (1)
+Feb 07 12:28:22 symfony [info] {sfWebResponse} Send content (45182 o)
