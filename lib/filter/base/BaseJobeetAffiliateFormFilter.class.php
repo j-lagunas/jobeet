@@ -1,24 +1,23 @@
 <?php
 
-require_once(sfConfig::get('sf_lib_dir').'/filter/base/BaseFormFilterPropel.class.php');
-
 /**
  * JobeetAffiliate filter form base class.
  *
  * @package    jobeet
  * @subpackage filter
  * @author     Your name here
+ * @version    SVN: $Id: sfPropelFormFilterGeneratedTemplate.php 24051 2009-11-16 21:08:08Z Kris.Wallsmith $
  */
-class BaseJobeetAffiliateFormFilter extends BaseFormFilterPropel
+abstract class BaseJobeetAffiliateFormFilter extends BaseFormFilterPropel
 {
   public function setup()
   {
     $this->setWidgets(array(
-      'url'                            => new sfWidgetFormFilterInput(),
-      'email'                          => new sfWidgetFormFilterInput(),
-      'token'                          => new sfWidgetFormFilterInput(),
+      'url'                            => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'email'                          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'token'                          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'is_active'                      => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'created_at'                     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => true)),
+      'created_at'                     => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
       'jobeet_category_affiliate_list' => new sfWidgetFormPropelChoice(array('model' => 'JobeetCategory', 'add_empty' => true)),
     ));
 

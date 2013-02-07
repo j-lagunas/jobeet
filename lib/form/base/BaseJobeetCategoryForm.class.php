@@ -3,24 +3,27 @@
 /**
  * JobeetCategory form base class.
  *
+ * @method JobeetCategory getObject() Returns the current form's model object
+ *
  * @package    jobeet
  * @subpackage form
  * @author     Your name here
+ * @version    SVN: $Id: sfPropelFormGeneratedTemplate.php 24051 2009-11-16 21:08:08Z Kris.Wallsmith $
  */
-class BaseJobeetCategoryForm extends BaseFormPropel
+abstract class BaseJobeetCategoryForm extends BaseFormPropel
 {
   public function setup()
   {
     $this->setWidgets(array(
       'id'                             => new sfWidgetFormInputHidden(),
-      'name'                           => new sfWidgetFormInput(),
-      'jobeet_category_affiliate_list' => new sfWidgetFormPropelChoiceMany(array('model' => 'JobeetAffiliate')),
+      'name'                           => new sfWidgetFormInputText(),
+      'jobeet_category_affiliate_list' => new sfWidgetFormPropelChoice(array('multiple' => true, 'model' => 'JobeetAffiliate')),
     ));
 
     $this->setValidators(array(
       'id'                             => new sfValidatorPropelChoice(array('model' => 'JobeetCategory', 'column' => 'id', 'required' => false)),
       'name'                           => new sfValidatorString(array('max_length' => 255)),
-      'jobeet_category_affiliate_list' => new sfValidatorPropelChoiceMany(array('model' => 'JobeetAffiliate', 'required' => false)),
+      'jobeet_category_affiliate_list' => new sfValidatorPropelChoice(array('multiple' => true, 'model' => 'JobeetAffiliate', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -77,7 +80,7 @@ class BaseJobeetCategoryForm extends BaseFormPropel
       return;
     }
 
-    if (is_null($con))
+    if (null === $con)
     {
       $con = $this->getConnection();
     }

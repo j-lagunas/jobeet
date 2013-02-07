@@ -3,29 +3,32 @@
 /**
  * JobeetJob form base class.
  *
+ * @method JobeetJob getObject() Returns the current form's model object
+ *
  * @package    jobeet
  * @subpackage form
  * @author     Your name here
+ * @version    SVN: $Id: sfPropelFormGeneratedTemplate.php 24051 2009-11-16 21:08:08Z Kris.Wallsmith $
  */
-class BaseJobeetJobForm extends BaseFormPropel
+abstract class BaseJobeetJobForm extends BaseFormPropel
 {
   public function setup()
   {
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
       'category_id'  => new sfWidgetFormPropelChoice(array('model' => 'JobeetCategory', 'add_empty' => false)),
-      'type'         => new sfWidgetFormInput(),
-      'company'      => new sfWidgetFormInput(),
-      'logo'         => new sfWidgetFormInput(),
-      'url'          => new sfWidgetFormInput(),
-      'position'     => new sfWidgetFormInput(),
-      'location'     => new sfWidgetFormInput(),
+      'type'         => new sfWidgetFormInputText(),
+      'company'      => new sfWidgetFormInputText(),
+      'logo'         => new sfWidgetFormInputText(),
+      'url'          => new sfWidgetFormInputText(),
+      'position'     => new sfWidgetFormInputText(),
+      'location'     => new sfWidgetFormInputText(),
       'description'  => new sfWidgetFormTextarea(),
       'how_to_apply' => new sfWidgetFormTextarea(),
-      'token'        => new sfWidgetFormInput(),
+      'token'        => new sfWidgetFormInputText(),
       'is_public'    => new sfWidgetFormInputCheckbox(),
       'is_activated' => new sfWidgetFormInputCheckbox(),
-      'email'        => new sfWidgetFormInput(),
+      'email'        => new sfWidgetFormInputText(),
       'expires_at'   => new sfWidgetFormDateTime(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),

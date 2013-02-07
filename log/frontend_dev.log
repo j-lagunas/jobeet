@@ -1251,3 +1251,62 @@ Feb 07 14:09:40 symfony [debug] {sfPropelLogger} Binding '10' at position :p1 w/
 Feb 07 14:09:40 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "job/show".
 Feb 07 14:09:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
 Feb 07 14:09:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:26:59 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/job/show/id/1" (/).
+Feb 07 14:26:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 07 14:26:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:26:59 symfony [info] {sfWebDebugLogger} Configuration 383.45 ms (7)
+Feb 07 14:26:59 symfony [info] {sfWebDebugLogger} Factories 167.68 ms (1)
+Feb 07 14:27:17 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/job" (/).
+Feb 07 14:27:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Feb 07 14:27:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:27:17 symfony [info] {sfWebDebugLogger} Configuration 0.68 ms (5)
+Feb 07 14:27:17 symfony [info] {sfWebDebugLogger} Factories 59.01 ms (1)
+Feb 07 14:28:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 14:28:33 symfony [err] {sfParseException} Configuration file "/usr/share/php/symfony/config/config/filters.yml" specifies category "common" with missing class key.
+Feb 07 14:28:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 07 14:28:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:28:33 symfony [info] {sfWebDebugLogger} Configuration 132.08 ms (7)
+Feb 07 14:28:33 symfony [info] {sfWebDebugLogger} Factories 175.61 ms (1)
+Feb 07 14:33:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 14:33:47 symfony [err] {sfParseException} Configuration file "/usr/share/php/symfony/config/config/filters.yml" specifies category "common" with missing class key.
+Feb 07 14:33:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 07 14:33:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:33:47 symfony [info] {sfWebDebugLogger} Configuration 132.88 ms (7)
+Feb 07 14:33:47 symfony [info] {sfWebDebugLogger} Factories 108.23 ms (1)
+Feb 07 14:36:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /job with parameters array (  'module' => 'job',  'action' => 'index',)
+Feb 07 14:36:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 14:36:06 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 14:36:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 14:36:06 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Feb 07 14:36:06 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 07 14:36:06 symfony [debug] {sfPropelLogger} SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job`
+Feb 07 14:36:06 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Feb 07 14:36:06 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 14:36:06 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 14:36:06 symfony [info] {main} Get slot "title"
+Feb 07 14:36:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 14:36:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:36:06 symfony [info] {sfWebDebugLogger} Configuration 224.36 ms (10)
+Feb 07 14:36:06 symfony [info] {sfWebDebugLogger} Factories 109.50 ms (1)
+Feb 07 14:36:06 symfony [info] {sfWebDebugLogger} Action "job/index" 84.77 ms (1)
+Feb 07 14:36:06 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 123.66 ms (1)
+Feb 07 14:36:06 symfony [info] {sfWebResponse} Send content (71146 o)
+Feb 07 14:36:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/show/id/1 with parameters array (  'module' => 'job',  'action' => 'show',  'id' => '1',)
+Feb 07 14:36:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 14:36:18 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Feb 07 14:36:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 14:36:18 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Feb 07 14:36:18 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Feb 07 14:36:18 symfony [debug] {sfPropelLogger} SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID='1'
+Feb 07 14:36:18 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Feb 07 14:36:18 symfony [info] {main} Set slot "title"
+Feb 07 14:36:18 symfony [info] {sfPHPView} Decorate content with "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 14:36:18 symfony [info] {sfPHPView} Render "/home/vagrant/jobeet/apps/frontend/templates/layout.php"
+Feb 07 14:36:18 symfony [info] {main} Get slot "title"
+Feb 07 14:36:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 14:36:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 14:36:18 symfony [info] {sfWebDebugLogger} Configuration 64.39 ms (11)
+Feb 07 14:36:18 symfony [info] {sfWebDebugLogger} Factories 90.07 ms (1)
+Feb 07 14:36:18 symfony [info] {sfWebDebugLogger} Action "job/show" 76.91 ms (1)
+Feb 07 14:36:18 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 159.06 ms (1)
+Feb 07 14:36:18 symfony [info] {sfWebResponse} Send content (74952 o)

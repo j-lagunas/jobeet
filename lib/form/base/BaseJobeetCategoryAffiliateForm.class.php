@@ -3,11 +3,14 @@
 /**
  * JobeetCategoryAffiliate form base class.
  *
+ * @method JobeetCategoryAffiliate getObject() Returns the current form's model object
+ *
  * @package    jobeet
  * @subpackage form
  * @author     Your name here
+ * @version    SVN: $Id: sfPropelFormGeneratedTemplate.php 24051 2009-11-16 21:08:08Z Kris.Wallsmith $
  */
-class BaseJobeetCategoryAffiliateForm extends BaseFormPropel
+abstract class BaseJobeetCategoryAffiliateForm extends BaseFormPropel
 {
   public function setup()
   {

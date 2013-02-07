@@ -1,35 +1,34 @@
 <?php
 
-require_once(sfConfig::get('sf_lib_dir').'/filter/base/BaseFormFilterPropel.class.php');
-
 /**
  * JobeetJob filter form base class.
  *
  * @package    jobeet
  * @subpackage filter
  * @author     Your name here
+ * @version    SVN: $Id: sfPropelFormFilterGeneratedTemplate.php 24051 2009-11-16 21:08:08Z Kris.Wallsmith $
  */
-class BaseJobeetJobFormFilter extends BaseFormFilterPropel
+abstract class BaseJobeetJobFormFilter extends BaseFormFilterPropel
 {
   public function setup()
   {
     $this->setWidgets(array(
       'category_id'  => new sfWidgetFormPropelChoice(array('model' => 'JobeetCategory', 'add_empty' => true)),
       'type'         => new sfWidgetFormFilterInput(),
-      'company'      => new sfWidgetFormFilterInput(),
+      'company'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'logo'         => new sfWidgetFormFilterInput(),
       'url'          => new sfWidgetFormFilterInput(),
-      'position'     => new sfWidgetFormFilterInput(),
-      'location'     => new sfWidgetFormFilterInput(),
-      'description'  => new sfWidgetFormFilterInput(),
-      'how_to_apply' => new sfWidgetFormFilterInput(),
-      'token'        => new sfWidgetFormFilterInput(),
+      'position'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'location'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'description'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'how_to_apply' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'token'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'is_public'    => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'is_activated' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'email'        => new sfWidgetFormFilterInput(),
+      'email'        => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'expires_at'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
-      'created_at'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => true)),
-      'updated_at'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => true)),
+      'created_at'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
+      'updated_at'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate())),
     ));
 
     $this->setValidators(array(
